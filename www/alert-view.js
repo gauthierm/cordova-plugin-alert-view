@@ -35,6 +35,7 @@
 
 		var config = {
 			title: options.title || '',
+			message: options.message || '',
 			items : options.items || ['Cancel'],
 			destructiveButtonIndex : options.hasOwnProperty('destructiveButtonIndex') ? options.destructiveButtonIndex : undefined,
 			cancelButtonIndex : options.hasOwnProperty('cancelButtonIndex') ? options.cancelButtonIndex : undefined
@@ -50,10 +51,10 @@
 
 			if (typeof callback === 'function') {
 				callback.apply(
-					scope, {
-						value: buttonValue,
-						index: buttonIndex
-					}
+					scope, [
+						buttonValue,
+						buttonIndex
+					]
 				);
 			}
 		};
