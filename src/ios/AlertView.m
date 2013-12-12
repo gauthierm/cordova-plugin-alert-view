@@ -41,14 +41,12 @@
 	NSString *message = [options objectForKey:@"message"] ?: @"";
 	NSArray *items = [options objectForKey:@"items"];
 	NSInteger cancelButtonIndex = [[options objectForKey:@"cancelButtonIndex"] intValue] ?: false;
-	NSInteger destructiveButtonIndex = [[options objectForKey:@"destructiveButtonIndex"] intValue] ?: false;
 
 	// create AlertView
 	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
 	                                              message:message
 	                                              delegate:self
 	                                              cancelButtonTitle:nil
-	                                              destructiveButtonTitle:nil
 	                                              otherButtonTitles:nil
 	];
 
@@ -60,10 +58,6 @@
 	// handle cancelButtonIndex
 	if ([options objectForKey:@"cancelButtonIndex"]) {
 		alertView.cancelButtonIndex = cancelButtonIndex;
-	}
-	// handle destructiveButtonIndex
-	if ([options objectForKey:@"destructiveButtonIndex"]) {
-		alertView.destructiveButtonIndex = destructiveButtonIndex;
 	}
 
 	[alertView show];

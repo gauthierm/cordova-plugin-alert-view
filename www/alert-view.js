@@ -37,7 +37,6 @@
 			title: options.title || '',
 			message: options.message || '',
 			items : options.items || ['Cancel'],
-			destructiveButtonIndex : options.hasOwnProperty('destructiveButtonIndex') ? options.destructiveButtonIndex : undefined,
 			cancelButtonIndex : options.hasOwnProperty('cancelButtonIndex') ? options.cancelButtonIndex : undefined
 		};
 

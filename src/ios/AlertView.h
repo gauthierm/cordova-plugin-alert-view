@@ -26,10 +26,10 @@
   @license   http://www.opensource.org/licenses/mit-license.html MIT License
 */
 
-#import <Foundation/dwiFoundation.h>
+#import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface AlertView: CDVPlugin <AlertViewDelegate> {
+@interface AlertView: CDVPlugin <UIAlertViewDelegate> {
 }
 
 @property (nonatomic, copy) NSString* callbackId;
