@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.silverorange.alert-view"
+	version="1.0.0">
+
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<name>alert-view</name>
+	<keywords>alertview,alert</keywords>
+
+	<description>iOS native AlertView.</description>
+
+	<js-module src="www/alert-view.js" name="alert-view">
+		<clobbers target="window.AlertView" />
+	</js-module>
+
+	<author>Michael Gauthier</author>
+
+	<license>MIT License</license>
+
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="AlertView">
+				<param name="ios-package" value="AlertView" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/AlertView.h" />
+		<source-file src="src/ios/AlertView.m" />
+	</platform>
+
+</plugin>
+
+
